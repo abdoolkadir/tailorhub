@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* global css */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0.6em 2em;
+  margin: 0.5em 0;
+  border: 1px solid #e3e3e3;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Login page */
+.login-page {
+  display: flex;
+}
+
+.col-left {
+  width: 57%;
+  height: 100vh;
+}
+
+.col-right {
+  width: 43%;
+  background: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-left img {
+  height: 100%;
+  width: 100%;
+}
+
+.form-parent {
+  z-index: 9;
+  position: relative;
+}
+
+form {
+  background: #ffffff;
+  box-shadow: 0px 20px 40px rgba(180, 180, 180, 0.2);
+  border-radius: 2px;
+  padding: 4em;
+  text-align: center;
+}
+
+.form-logo {
+  margin-bottom: 1.5em;
+}
+
+.form-group {
+  margin-bottom: 2em;
+  text-align: left;
+  font-size: 11px;
+  color: #999999;
+}
+
+.form-input {
+  border: 1px solid #e5e5e5;
+  width: 100%;
+  padding: 0.8em 1em;
+  margin-bottom: 0.8em;
+}
+
+.patterns {
+  z-index: -99;
+  position: relative;
+}
+
+#pattern-1 {
+  position: absolute;
+  top: -538px;
+  left: -7px;
+}
+
+#pattern-2 {
+  position: absolute;
+  top: -59px;
+  right: -10px;
+}
+
+.or {
+  padding: 0.6em;
+}
+
+.or p {
+  display: inline-block;
+}
+
+.or span {
+  display: inline-block;
+  height: 0.1px;
+  width: 130px;
+  margin: 0.5em;
+  background: #53a9e7;
+}
