@@ -1,23 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const FormInputGroup = ({ name, value, placeholder, type }) => {
+const FormInputGroup = ({ name, value, placeholder, type, onChange }) => {
   return (
     <input
+      required
       type={type}
       name={name}
       className="form-input"
       placeholder={placeholder}
       value={value}
+      onChange={onChange}
     />
   );
-};
-
-FormInputGroup.propTypes = {
-  name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired
 };
 
 FormInputGroup.defaultProps = {
