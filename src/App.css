@@ -205,16 +205,22 @@ nav ul a {
   margin-right: 5px;
 }
 
-.search-result {
-  padding: 2em 0;
-  border: 1px solid #d7dbde;
+.search-result-bar {
+  width: 100%;
+  padding: 2em 0 0.5em 0;
+  border-bottom: 1px solid #d7dbde;
 }
 
-.search-result p {
+.search-result-bar p {
   margin-bottom: 0.5em;
 }
 
 .search-result-heading {
+  text-align: center;
+}
+
+.search-result {
+  background: #fff;
   text-align: center;
 }
 
@@ -240,14 +246,71 @@ nav ul a {
 }
 
 .drop-down-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 10px 0;
   margin-top: 10px;
   padding-left: 1em;
   background: #ffffff;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
+}
+
+.drop-down-list-container {
+  position: relative;
 }
 
 .list-item {
   list-style: none;
   margin-bottom: 0.8em;
+}
+
+/* Products and search results */
+.products {
+  margin: 2em 0;
+  /* padding: 0 2em; */
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 50px 30px;
+  justify-content: center;
+}
+
+.search-result {
+  padding: 2em 0;
+}
+
+.card {
+  text-align: left;
+  width: 289px;
+  /* background: #eff3f8; */
+}
+
+.card-image,
+.card-image img {
+  width: 100%;
+}
+
+.card-texts {
+  padding: 1em 0;
+}
+
+.card-texts p {
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.card-texts h4 {
+  margin-top: 5px;
+}
+
+.tailor {
+  display: flex;
+  margin-top: 5px;
+}
+
+.tailor span {
+  font-size: 14px;
+  margin-left: 10px;
 }

@@ -32,7 +32,12 @@ const LoginPage = (props) => {
       // props.history.push('/dashboard');
       window.location.href = '/dashboard';
     } else {
-      console.log('Failed', response.message, 'error');
+      if (response.status === 401 || response.status === 400) {
+        setError('Something went wrong, please try again.');
+        console.log(response.status);
+      } else {
+        setError('Username or password invalid');
+      }
     }
 
     // axios
@@ -45,7 +50,8 @@ const LoginPage = (props) => {
     //       sessionStorage.setItem('accessToken', response['accessToken']);
     //       sessionStorage.setItem('user', JSON.stringify(response['user']));
 
-    //       props.history.push('/dashboard');
+    //       // props.history.push('/dashboard');
+    //       window.location.href = '/dashboard';
     //     }
     //   })
     //   .catch((error) => {

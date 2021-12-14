@@ -1,26 +1,23 @@
 import React from 'react';
-import DropDownList from './DropDownList';
-import { dropDownData } from '../data/dropDownData';
+import { productsData } from '../data/productsData';
+import ProductCard from './ProductCard';
 
 function SearchResult() {
   return (
     <div className="search-result">
-      <div className="search-result-heading">
-        <p>Your search results for</p>
-        <h2>"Kaftan"</h2>
-      </div>
+      <p>16 items found</p>
 
-      <div className="filters">
-        <div className="drop-down">
-          {dropDownData.map(({ icon, listItem, header }, index) => (
-            <DropDownList
-              icon={icon}
-              header={header}
-              key={index}
-              items={listItem}
-            />
-          ))}
-        </div>
+      <div className="products">
+        {productsData.map(({ image, title, price, icon, tailor }, index) => (
+          <ProductCard
+            image={image}
+            title={title}
+            price={price}
+            icon={icon}
+            tailorName={tailor}
+            key={index}
+          />
+        ))}
       </div>
     </div>
   );
