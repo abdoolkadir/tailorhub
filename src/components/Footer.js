@@ -25,9 +25,9 @@ function Footer() {
 
         <div className="footer-links">
           {footerData.map(({ title, links }, index) => (
-            <div>
+            <div key={index}>
               <p>{title}</p>
-              <ul key={index}>
+              <ul>
                 {links.map((link, index) => (
                   <li key={index}>
                     <a href="/">{link}</a>

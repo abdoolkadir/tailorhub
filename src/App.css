@@ -34,6 +34,10 @@ a img {
   margin-right: 10px;
 }
 
+.nav-mobile-menu {
+  display: none;
+}
+
 /* Login page */
 .login-page {
   display: flex;
@@ -183,7 +187,6 @@ nav ul a {
 
 .dashboard {
   background: #eff3f8;
-  /* height: 100vh; */
 }
 
 .search-pane {
@@ -229,11 +232,9 @@ nav ul a {
   display: flex;
   place-content: space-between;
   margin: 2em 0;
-  /* flex-direction: column; */
 }
 .drop-down-container {
   width: 18%;
-  /* padding: 2em; */
 }
 
 .drop-down-header {
@@ -269,13 +270,13 @@ nav ul a {
 
 /* Products and search results */
 .products {
-  margin: 2em 0;
+  margin: 2em auto;
   padding-bottom: 4em;
-  /* padding: 0 2em; */
+  padding: 0 2em;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1280px;
   grid-gap: 50px 30px;
-  justify-content: center;
 }
 
 .search-result {
@@ -284,8 +285,6 @@ nav ul a {
 
 .card {
   text-align: left;
-  width: 289px;
-  /* background: #eff3f8; */
 }
 
 .card-image,
@@ -321,9 +320,7 @@ nav ul a {
 footer {
   color: #fff;
   background-color: #060f41;
-  /* margin-top: 2em; */
   padding: 2em 4em;
-  /* border: 1px solid red; */
 }
 
 .footer-section-1 {
@@ -367,7 +364,6 @@ footer {
 .footer-links li a {
   text-decoration: none;
   color: #fff;
-  /* font-size: 14px; */
 }
 
 .footer-section-2 {
@@ -385,28 +381,124 @@ footer {
 .footer-section-2 .col-1 span {
   margin: 0 5px;
   display: inline-block;
-  padding: 0.8em;
+  padding: 0.5em;
   border: 1px solid #fff;
   border-radius: 50%;
 }
 
 /* Mobile Responsive */
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+  .login-page .col-left {
+    display: none;
+  }
+
+  .login-page .col-right {
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-page .col-right .container {
+    width: 90%;
+  }
+
+  .login-page .col-right form {
+    padding: 1em 2em;
+  }
+
+  .login-page .col-right form .or span {
+    width: 100px;
+  }
+
+  #pattern-1 {
+    top: -492px;
+  }
+
+  /* Dashboard */
+  header {
+    padding: 1em;
+  }
+
+  header .search {
+    display: none;
+  }
+
+  .cart {
+    padding: 0.4em;
+  }
+
+  .cart span {
+    padding: 0.2em 0.3em;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .nav-mobile-menu {
+    display: block;
+  }
+
+  /* Drop down */
+  .drop-down-header {
+    font-size: 9px;
+    padding: 0.4em 0.2em;
+  }
+
+  .drop-down-header img {
+    width: 8px;
+  }
+
+  .drop-down-list li {
+    font-size: 9px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2em 1em;
+  }
+
+  footer .footer-section-1 {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    margin: 2em 0;
+  }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
+/* Medium devices (landscape tablets, 1200px and 1024px) */
+@media only screen and (max-width: 1200px) and (min-width: 1024px) {
+  /* Login Page */
+  #pattern-1 {
+    top: -522px;
+  }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-}
+  .or span {
+    display: inline-block;
+    height: 0.1px;
+    width: 73px;
+    margin: 0.5em;
+    background: #53a9e7;
+  }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
+  /* Dashboard */
+  header {
+    display: flex;
+    place-content: space-between;
+    align-items: center;
+    background-color: #060f41;
+    padding: 1em 1.3em;
+    color: #fff;
+  }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+  nav ul a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1em;
+    font-weight: lighter;
+  }
 }

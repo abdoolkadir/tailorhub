@@ -50,6 +50,12 @@ function Header() {
         <small>My cart</small>
         <span>1</span>
       </div>
+
+      <div className="nav-mobile-menu">
+        <a href="/">
+          <img src="/assets/images/menu.svg" alt="" />
+        </a>
+      </div>
     </header>
   );
 }
