@@ -419,6 +419,7 @@ footer {
 
   /* Dashboard */
   header {
+    position: relative;
     padding: 1em;
   }
 
@@ -435,7 +436,23 @@ footer {
   }
 
   nav {
-    display: none;
+    width: 100%;
+    position: absolute;
+    top: 5.5em;
+    right: 0;
+    background: #060f41;
+    transition: all 0.8s ease;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 2em;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  nav ul li {
+    margin: 1.5em 0;
   }
 
   .nav-mobile-menu {

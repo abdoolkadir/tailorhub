@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { menuData } from '../data/menuData';
 
 function Header() {
+  const [open, setOpen] = useState(false);
+
   const handleLogout = () => {
     sessionStorage.removeItem('accessToken');
     sessionStorage.removeItem('user');
@@ -27,7 +29,10 @@ function Header() {
         />
       </div>
 
-      <nav>
+      <nav
+        onClick={() => setOpen(false)}
+        style={{ height: open ? '100vh' : '0' }}
+      >
         <ul>
           {menuData.map(({ link, type, title, icon }, index) => (
             <li key={index}>
@@ -52,9 +57,12 @@ function Header() {
       </div>
 
       <div className="nav-mobile-menu">
-        <a href="/">
-          <img src="/assets/images/menu.svg" alt="" />
-        </a>
+        <img
+          src={open ? '/assets/images/exit.svg' : '/assets/images/menu.svg'}
+          alt="Open Navigation"
+          id="mobile_cta"
+          onClick={() => setOpen(!open)}
+        />
       </div>
     </header>
   );
